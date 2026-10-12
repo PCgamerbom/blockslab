@@ -15,7 +15,7 @@ Nova aba **Ferramentas** nas configurações:
 - Português do Brasil como idioma padrão em instalações novas, telemetria desligada por padrão e tela de supporters removida.
 
 ## Download
-Baixe o `Blockslab.exe` mais recente em **[Releases](https://github.com/PCgamerbom/Blockslab/releases/latest)** ou no site: https://pcgamerbom.github.io/Blockslab
+Baixe o `Blockslab.exe` mais recente em **[Releases](https://github.com/PCgamerbom/Blockslab/releases/latest)** ou no site: https://webblockslab.pages.dev/
 
 Requer Windows 10/11 e o [.NET 6 Desktop Runtime](https://aka.ms/dotnet-core-applaunch?missing_runtime=true&arch=x64&rid=win11-x64&apphost_version=6.0.36&gui=true). O Windows SmartScreen pode avisar por ser um app novo ("Mais informações" → "Executar assim mesmo").
 
