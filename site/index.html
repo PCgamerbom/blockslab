@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blockslab — Launcher alternativo para Roblox</title>
+<meta name="description" content="Blockslab: launcher open source para Roblox com mods, Discord Rich Presence, FastFlags e temas.">
+<link rel="icon" href="assets/favicon.png">
+<style>
+:root{--bg:#0b1020;--card:#131a33;--txt:#e8ecff;--mut:#9aa6d1;--a:#6366f1;--b:#14b8a6;--bd:#243058}
+@media (prefers-color-scheme:light){:root{--bg:#f5f7ff;--card:#fff;--txt:#14173a;--mut:#555d8a;--bd:#dfe4fb}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:inherit}.wrap{max-width:1040px;margin:auto;padding:0 20px}
+nav{position:sticky;top:0;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--bd);z-index:5}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;text-decoration:none}.brand img{width:32px;height:32px}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}nav ul a{text-decoration:none;color:var(--mut);font-size:.95rem}nav ul a:hover{color:var(--txt)}
+.hero{text-align:center;padding:90px 0 60px}
+.hero img{width:130px;height:130px;filter:drop-shadow(0 10px 30px rgba(99,102,241,.5))}
+h1{font-size:clamp(2.4rem,6vw,4rem);margin:18px 0 8px;line-height:1.1;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:620px;margin:0 auto 28px;color:var(--mut);font-size:1.15rem}
+.btn{display:inline-block;padding:14px 26px;border-radius:12px;font-weight:700;text-decoration:none;margin:5px}
+.btn.p{background:linear-gradient(90deg,var(--a),var(--b));color:#fff}.btn.s{border:1px solid var(--bd);background:var(--card)}
+.btn:hover{transform:translateY(-2px)}
+.note{font-size:.85rem;color:var(--mut);margin-top:10px}
+section{padding:56px 0}h2{font-size:2rem;margin:0 0 8px}.sub{color:var(--mut);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:22px}.card h3{margin:6px 0}.card p{margin:0;color:var(--mut);font-size:.95rem}.ico{font-size:1.8rem}
+ol.steps{counter-reset:s;list-style:none;padding:0;display:grid;gap:12px}
+ol.steps li{counter-increment:s;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 16px 16px 62px;position:relative}
+ol.steps li:before{content:counter(s);position:absolute;left:16px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--b));color:#fff;display:grid;place-items:center;font-weight:800}
+details{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px 18px;margin-bottom:10px}summary{cursor:pointer;font-weight:700}details p{color:var(--mut);margin:8px 0 0}
+footer{border-top:1px solid var(--bd);padding:30px 0;color:var(--mut);font-size:.9rem;text-align:center}
+code{background:var(--card);border:1px solid var(--bd);padding:2px 6px;border-radius:6px}
+@media(max-width:640px){nav ul{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="brand" href="#"><img src="assets/logo.png" alt=""> Blockslab</a>
+<ul><li><a href="#recursos">Recursos</a></li><li><a href="#instalar">Instalar</a></li><li><a href="#faq">FAQ</a></li><li><a href="https://github.com/PCgamerbom/Blockslab">GitHub</a></li></ul></div></nav>
+
+<header class="hero wrap">
+<img src="assets/logo.png" alt="Logo do Blockslab">
+<h1>Blockslab</h1>
+<p>Um launcher alternativo e open source para o Roblox no Windows. Mais controle, mais personalização, sem complicação.</p>
+<a class="btn p" id="dl" href="https://github.com/PCgamerbom/Blockslab/releases/latest">⬇ Baixar para Windows</a>
+<a class="btn s" href="https://github.com/PCgamerbom/Blockslab">Ver código no GitHub</a>
+<div class="note" id="ver">Windows 10/11 · requer .NET 6 Desktop Runtime</div>
+</header>
+
+<section id="recursos"><div class="wrap">
+<h2>Tudo o que você precisa</h2><p class="sub">Os recursos do Bloxstrap, mais ferramentas exclusivas do Blockslab.</p>
+<div class="grid">
+<div class="card"><div class="ico">🎮</div><h3>Discord Rich Presence</h3><p>Mostre aos amigos o que você está jogando e deixe-os entrar no mesmo servidor.</p></div>
+<div class="card"><div class="ico">🧩</div><h3>Mods de arquivos</h3><p>Troque som de morte, cursor, fontes e ícones do Roblox de forma simples.</p></div>
+<div class="card"><div class="ico">🌍</div><h3>Local do servidor</h3><p>Veja em que região do mundo está o servidor em que você entrou.</p></div>
+<div class="card"><div class="ico">⚙️</div><h3>FastFlags</h3><p>Ajuste a qualidade gráfica e o comportamento da engine com poucos cliques.</p></div>
+<div class="card"><div class="ico">🎨</div><h3>Temas de inicialização</h3><p>Escolha ou crie o visual da tela de carregamento do Roblox.</p></div>
+<div class="card"><div class="ico">🔒</div><h3>Privacidade</h3><p>Telemetria desativada por padrão e código 100% aberto para auditar.</p></div>
+</div></div>
+<div class="card"><div class="ico">🚀</div><h3>Perfis de gráficos</h3><p>Desempenho, Equilibrado ou Qualidade: troque o visual do Roblox com um clique.</p></div>
+<div class="card"><div class="ico">💾</div><h3>Backup e perfis</h3><p>Salve seus FastFlags com nome, troque quando quiser e faça backup das configurações.</p></div>
+<div class="card"><div class="ico">🧹</div><h3>Limpeza de cache</h3><p>Libere espaço removendo arquivos temporários do Roblox direto pelo app.</p></div>
+<div class="card"><div class="ico">🇧🇷</div><h3>Em português</h3><p>Interface em português do Brasil por padrão.</p></div></section>
+
+<section id="instalar"><div class="wrap">
+<h2>Como instalar</h2><p class="sub">Leva menos de um minuto.</p>
+<ol class="steps">
+<li>Instale o <a href="https://aka.ms/dotnet-core-applaunch?missing_runtime=true&arch=x64&rid=win11-x64&apphost_version=6.0.36&gui=true">.NET 6 Desktop Runtime</a> (se ainda não tiver).</li>
+<li>Baixe o <code>Blockslab.exe</code> na página de <a href="https://github.com/PCgamerbom/Blockslab/releases/latest">Releases</a>.</li>
+<li>Execute, ajuste suas preferências e clique em <b>Instalar</b>. Se o SmartScreen avisar, clique em “Mais informações” → “Executar assim mesmo”.</li>
+</ol></div></section>
+
+<section id="faq"><div class="wrap">
+<h2>Perguntas frequentes</h2><p class="sub">&nbsp;</p>
+<details><summary>É seguro?</summary><p>O código-fonte é público e você pode auditar tudo no GitHub. Baixe somente pelo repositório oficial ou por este site.</p></details>
+<details><summary>Posso ser banido por usar?</summary><p>O Blockslab não injeta nada no cliente do Roblox, mas nenhum software de terceiros tem garantia de ausência de risco. Use por sua conta.</p></details>
+<details><summary>Qual a relação com o Bloxstrap?</summary><p>O Blockslab é um fork do Bloxstrap (licença MIT), criado por pizzaboxer e colaboradores. Não somos afiliados ao projeto original nem à Roblox Corporation.</p></details>
+<details><summary>Como relatar um problema?</summary><p>Abra uma <a href="https://github.com/PCgamerbom/Blockslab/issues">issue no GitHub</a>.</p></details>
+</div></section>
+
+<footer><div class="wrap">Blockslab · MIT · Baseado no <a href="https://github.com/bloxstraplabs/bloxstrap">Bloxstrap</a> © pizzaboxer · Roblox é marca da Roblox Corporation, sem afiliação.</div></footer>
+
+<script>
+fetch("https://api.github.com/repos/PCgamerbom/Blockslab/releases/latest").then(r=>r.ok?r.json():null).then(j=>{
+  if(!j)return;var a=(j.assets||[]).find(function(x){return /\.exe$/i.test(x.name)});
+  if(a)document.getElementById("dl").href=a.browser_download_url;
+  document.getElementById("ver").textContent="Versão "+j.tag_name+" · Windows 10/11 · requer .NET 6 Desktop Runtime";
+}).catch(function(){});
+</script>
+</body></html>
